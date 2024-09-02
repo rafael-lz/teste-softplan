@@ -1,0 +1,108 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{0E4DDE0B-28AF-42C6-861B-557CBDAF2BC0}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="TS.Lib\TS.Lib.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="TS.Modelo\TS.Modelo.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="TS.Aplicacao\TS.Aplicacao.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="TS.Persistencia.SQLite\TS.Persistencia.SQLite.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="TS.API.ViaCEP\TS.API.ViaCEP.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="TS.Cliente\TS.Cliente.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="TS.Cliente.VCL\TS.Cliente.VCL.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="TS_Lib">
+        <MSBuild Projects="TS.Lib\TS.Lib.dproj"/>
+    </Target>
+    <Target Name="TS_Lib:Clean">
+        <MSBuild Projects="TS.Lib\TS.Lib.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="TS_Lib:Make">
+        <MSBuild Projects="TS.Lib\TS.Lib.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="TS_Modelo">
+        <MSBuild Projects="TS.Modelo\TS.Modelo.dproj"/>
+    </Target>
+    <Target Name="TS_Modelo:Clean">
+        <MSBuild Projects="TS.Modelo\TS.Modelo.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="TS_Modelo:Make">
+        <MSBuild Projects="TS.Modelo\TS.Modelo.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="TS_Aplicacao">
+        <MSBuild Projects="TS.Aplicacao\TS.Aplicacao.dproj"/>
+    </Target>
+    <Target Name="TS_Aplicacao:Clean">
+        <MSBuild Projects="TS.Aplicacao\TS.Aplicacao.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="TS_Aplicacao:Make">
+        <MSBuild Projects="TS.Aplicacao\TS.Aplicacao.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="TS_Persistencia_SQLite">
+        <MSBuild Projects="TS.Persistencia.SQLite\TS.Persistencia.SQLite.dproj"/>
+    </Target>
+    <Target Name="TS_Persistencia_SQLite:Clean">
+        <MSBuild Projects="TS.Persistencia.SQLite\TS.Persistencia.SQLite.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="TS_Persistencia_SQLite:Make">
+        <MSBuild Projects="TS.Persistencia.SQLite\TS.Persistencia.SQLite.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="TS_API_ViaCEP">
+        <MSBuild Projects="TS.API.ViaCEP\TS.API.ViaCEP.dproj"/>
+    </Target>
+    <Target Name="TS_API_ViaCEP:Clean">
+        <MSBuild Projects="TS.API.ViaCEP\TS.API.ViaCEP.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="TS_API_ViaCEP:Make">
+        <MSBuild Projects="TS.API.ViaCEP\TS.API.ViaCEP.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="TS_Cliente">
+        <MSBuild Projects="TS.Cliente\TS.Cliente.dproj"/>
+    </Target>
+    <Target Name="TS_Cliente:Clean">
+        <MSBuild Projects="TS.Cliente\TS.Cliente.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="TS_Cliente:Make">
+        <MSBuild Projects="TS.Cliente\TS.Cliente.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="TS_Cliente_VCL">
+        <MSBuild Projects="TS.Cliente.VCL\TS.Cliente.VCL.dproj"/>
+    </Target>
+    <Target Name="TS_Cliente_VCL:Clean">
+        <MSBuild Projects="TS.Cliente.VCL\TS.Cliente.VCL.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="TS_Cliente_VCL:Make">
+        <MSBuild Projects="TS.Cliente.VCL\TS.Cliente.VCL.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="TS_Lib;TS_Modelo;TS_Aplicacao;TS_Persistencia_SQLite;TS_API_ViaCEP;TS_Cliente;TS_Cliente_VCL"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="TS_Lib:Clean;TS_Modelo:Clean;TS_Aplicacao:Clean;TS_Persistencia_SQLite:Clean;TS_API_ViaCEP:Clean;TS_Cliente:Clean;TS_Cliente_VCL:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="TS_Lib:Make;TS_Modelo:Make;TS_Aplicacao:Make;TS_Persistencia_SQLite:Make;TS_API_ViaCEP:Make;TS_Cliente:Make;TS_Cliente_VCL:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

@@ -1,0 +1,46 @@
+package TS.Aplicacao;
+
+{$R *.res}
+{$IFDEF IMPLICITBUILDING This IFDEF should not be used by users}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO OFF}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION OFF}
+{$OVERFLOWCHECKS ON}
+{$RANGECHECKS ON}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES ON}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DEFINE DEBUG}
+{$ENDIF IMPLICITBUILDING}
+{$IMPLICITBUILD ON}
+
+requires
+  TS.Modelo;
+
+contains
+  TS.Aplicacao.ServicoDeBuscaPeloCEP in 'Units\TS.Aplicacao.ServicoDeBuscaPeloCEP.pas',
+  TS.Aplicacao.ServicoDeBuscaPeloCEP.Erros in 'Units\TS.Aplicacao.ServicoDeBuscaPeloCEP.Erros.pas',
+  TS.Aplicacao.ServicoDeBuscaPeloCEP.Local in 'Units\TS.Aplicacao.ServicoDeBuscaPeloCEP.Local.pas',
+  TS.Aplicacao.ServicoDeBuscaPeloCEP.Remoto in 'Units\TS.Aplicacao.ServicoDeBuscaPeloCEP.Remoto.pas',
+  TS.Aplicacao.ServicoDeBuscaPeloEndereco in 'Units\TS.Aplicacao.ServicoDeBuscaPeloEndereco.pas',
+  TS.Aplicacao.ServicoDeBuscaPeloEndereco.Erros in 'Units\TS.Aplicacao.ServicoDeBuscaPeloEndereco.Erros.pas',
+  TS.Aplicacao.ServicoDeBuscaPeloEndereco.Local in 'Units\TS.Aplicacao.ServicoDeBuscaPeloEndereco.Local.pas',
+  TS.Aplicacao.ServicoDeBuscaPeloEndereco.Remoto in 'Units\TS.Aplicacao.ServicoDeBuscaPeloEndereco.Remoto.pas',
+  TS.Aplicacao.RepositorioDeEnderecos in 'Units\TS.Aplicacao.RepositorioDeEnderecos.pas',
+  TS.Aplicacao.ConsultaDeEnderecos in 'Units\TS.Aplicacao.ConsultaDeEnderecos.pas',
+  TS.Aplicacao.ConsultaDeEnderecos.Erros in 'Units\TS.Aplicacao.ConsultaDeEnderecos.Erros.pas';
+
+end.

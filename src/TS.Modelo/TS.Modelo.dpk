@@ -1,0 +1,47 @@
+package TS.Modelo;
+
+{$R *.res}
+{$IFDEF IMPLICITBUILDING This IFDEF should not be used by users}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO OFF}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION OFF}
+{$OVERFLOWCHECKS ON}
+{$RANGECHECKS ON}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES ON}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DEFINE DEBUG}
+{$ENDIF IMPLICITBUILDING}
+{$IMPLICITBUILD ON}
+
+requires
+  TS.Lib;
+
+contains
+  TS.Modelo.CEP in 'Units\TS.Modelo.CEP.pas',
+  TS.Modelo.CEP.Padrao in 'Units\TS.Modelo.CEP.Padrao.pas',
+  TS.Modelo.CEP.Utils in 'Units\TS.Modelo.CEP.Utils.pas',
+  TS.Modelo.UF in 'Units\TS.Modelo.UF.pas',
+  TS.Modelo.UF.Padrao in 'Units\TS.Modelo.UF.Padrao.pas',
+  TS.Modelo.UF.Utils in 'Units\TS.Modelo.UF.Utils.pas',
+  TS.Modelo.Endereco in 'Units\TS.Modelo.Endereco.pas',
+  TS.Modelo.Endereco.Padrao in 'Units\TS.Modelo.Endereco.Padrao.pas',
+  TS.Modelo.ConstrutorDeEndereco.Utils in 'Units\TS.Modelo.ConstrutorDeEndereco.Utils.pas',
+  TS.Modelo.ConstrutorDeEndereco in 'Units\TS.Modelo.ConstrutorDeEndereco.pas',
+  TS.Modelo.ConstrutorDeEndereco.Padrao in 'Units\TS.Modelo.ConstrutorDeEndereco.Padrao.pas',
+  TS.Modelo.ConstrutorDeEndereco.Erros in 'Units\TS.Modelo.ConstrutorDeEndereco.Erros.pas';
+
+end.

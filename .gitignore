@@ -1,0 +1,6 @@
+# Delphi
+*.local
+*.identcache
+
+# Projeto
+build
