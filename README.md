@@ -9,7 +9,7 @@ Este repositório contém o desafio de Delphi da Softplan.
 
 ## Aspectos técnicos
 
-### Sem destruir objetos
+### Liberação automática de objetos
 
 Todas (ou quase todas) as classes implementam interfaces. Além de dar uso para a contagem de referência que o Delphi
 aplica em objetos "interfaceados", ajuda também com o **DIP**.
